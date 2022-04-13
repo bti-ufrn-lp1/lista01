@@ -11,8 +11,7 @@
 - [ ] intervalos
 - [ ] fibonacci
 - [ ] minmax
-- [ ] inverter
-- [ ] Filtragem
+- [ ] filtragem
 
 --------
 &copy; DIMAp/IMD UFRN 2021-2022.
