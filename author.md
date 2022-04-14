@@ -4,14 +4,13 @@
 - E-mail: *\<inserir e-mail>*
 - Turma: *\<inserir código da disciplina e número da turma>*
 
-# Questões Finalizadas
+# Soluções Implementadas
 
 - [ ] negativos5
 - [ ] soma_vizinhos
-- [ ] intervalos
 - [ ] fibonacci
 - [ ] minmax
-- [ ] filtragem
+- [ ] inverter
 
 --------
 &copy; DIMAp/IMD UFRN 2021-2022.
