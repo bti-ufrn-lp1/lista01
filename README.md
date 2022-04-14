@@ -17,7 +17,29 @@ As tarefas centrais a serem realizadas neste trabalho consistem em projetar e im
 
 A descrição de cada um desses problemas está em seu respectivo diretório, juntamente com exemplos de entradas e saídas esperados para o programa e uma relação dos recursos da linguagem de programação C++ necessários à implementação da solução. Cada um desses repositórios possui um código fonte base que poderá ser utilizado como ponto de partida para a implementação das soluções, havendo comentários na forma de `// TODO` apontando as alterações necessárias a fazer e onde elas devem ser feitas. Dessa forma, o código fonte das soluções implementadas deverá constar nos respectivos diretórios.
 
-Cada projeto já está preparado para ser compilado individualmente com o uso de `cmake`. Para que seja possível usufruir da infraestrutura de compilação e teste disponível, **não se deve alterar outros arquivos que não sejam aqueles indicados**. 
+Cada projeto já está preparado para ser compilado individualmente com o uso de `cmake`. Para que seja possível usufruir da infraestrutura de compilação e teste disponível, **não se deve alterar outros arquivos que não sejam aqueles indicados**. De maneira geral, é importante seguir à risca as instruções sobre a implementação dos exercícios, uma vez que as respostas são validadas de forma automatizada. De preferencia, não se deve realizar qualquer modificação nos testes automatizados, a memos que seja acordado com o docente.
+
+Por fim, caso se deseje criar outros arquivos fonte para melhor modularizar o programa, é necessário alterar o *script* do `cmake` corespondente para incluir o novo arquivo fonte na lista de dependências do alvo `${APP_NAME}` com o comando `target_sources(${APP_NAME} PRIVATE "nome_arquivo.cpp")`.
+
+## Requisitos
+Para que seja possível compilar e executar os testes preparados para este trabalho, é necessário que os seguintes elementos estejam instalados no ambiente de desenvolvimento:
+
+- [*GNU Compiler Collection*](https://gcc.gnu.org) (a qual inclui o compilador `g++`), [`clang`](https://clang.llvm.org/) ou qualquer outro compilador para a linguagem C++
+- [`cmake`](https://cmake.org/), para gerar *makefiles* automaticamente e de forma otimizada para o projeto
+- [Python 3+](https://www.python.org/), para executar o *script* de teste de comparação de saída gerada/esperada
+
+## Categorias de exercícios
+Existem duas categorias de exercícios neste trabalho: implementação de um **programa** e implementação de uma **função**. Cada uma dessas categorias requer tarefas de implementação, compilação e testes específicas, as quais são descritas a seguir
+
+### I
+Para os exercícios que solicitam a implementação de um programa, apenas o arquivo `main.cpp` deverá ser editado. Neste caso, deve-se assumir que os dados de entrada para cada programa são lidos a partir da entrada padrão, utilizando o operador de extração `>>` sobre o objeto `cin`, enquanto que os dados de saída devem ser enviados para a saída padrão, utilizando o operador de inserção `<<` sobre o objeto `cout`, como mostra o exemplo abaixo. Ambos os objetos são disponibilizados pela biblioteca de entrada/saída `[iostream](https://www.cplusplus.com/reference/iostream/)` integrante da linguagem C++.
+
+```c++
+int x;
+std::cin >> std::ws >> x;     // equivalente a scanf("%d", &x) em C
+std::cout << x << std::endl;  // equivalente a scanf("%d\n", x) em C
+```
+Para os exercícios que solicitam a implementação de uma função, é necessário alterar apenas o arquivo `function.cpp`. Esse arquivo contém o corpo vazio da função que precisa ser implementada. Neste caso, **não se deve alterar a assinatura da função**, pois, se isso ocorrer, os testes automatizados não funcionarão.
 
 ## Orientações Gerais
 No desenvolvimento das soluções aos problemas propostos, as seguintes observações deverão ser atendidas:
