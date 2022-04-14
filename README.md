@@ -1,4 +1,5 @@
-# Lista de Exercícios 1: Elementos fundamentais de programação em C++
+# Lista 1: Elementos fundamentais de programação em C++
+<sub>Última atualização: 14/04/2022</sub>
 
 ## Visão Geral e Objetivos
 O objetivo desta lista de exercícios é colocar em prática as habilidades de **interpretar especificações de problemas** e projetar e implementar uma soluções na forma de programas na linguagem de programação C++. Para tanto, esta lista explora elementos fundamentais da programação em C++, como laços, estruturas condicionais simples e compostas, tipos de dados básicos e heterogêneos expressões lógicas, passagem de parâmetros, criação de funções, leitura de escrita de informações a partir da entrada e saída padrão, dentre outros.
@@ -6,10 +7,9 @@ O objetivo desta lista de exercícios é colocar em prática as habilidades de *
 De forma adicional, esta lista de exercícios também aborda elementos da [*Standard Template Library* (STL)](https://en.wikipedia.org/wiki/Standard_Template_Library). A STL integra a biblioteca da linguagem de programação C++ provendo um conjunto de classes referentes a estruturas de dados comuns como vetor, lista, pilha, etc. (*containers*), bem como algoritmos e iteradores para operarem sobre tais estruturas. Pelo fato de serem classes *template*, todos esses elementos genéricos, sendo, portanto, capazes de manipular quaisquer tipos de dados.
 
 ## Tarefas
-As tarefas centrais a serem realizadas neste trabalho consistem em projetar e implementar, em C++, programas para cada um dos seis seguintes problemas:
+As tarefas centrais a serem realizadas neste trabalho consistem em projetar e implementar, em C++, programas para cada um dos cinco seguintes problemas:
 
 1. negativo5
-2. intervalos
 3. soma_vizinhos
 4. fibonacci
 5. minmax
@@ -34,9 +34,23 @@ O sistema de controle de versões [Git](https://git-scm.com) e o serviço de hos
 
 O repositório Git criado pelo GitHub Classroom para cada equipe segue a mesma estrutura de diretórios presentes neste repositório. Todos os arquivos deverão constar no repositório obedecendo **estritamente** a divisão em diretórios, ou seja, os códigos fonte referentes às soluções implementadas deverão estar nos respectivos diretórios de cada problema. Além disso, o arquivo `author.md` presente no repositório deverá ser editado preenchendo as informações de identificação dos integrantes da equipe e informando-se quais dos problemas foram solucionados com sucesso. A fim de garantir a boa manutenção do repositório, deve-se ainda configurar corretamente o arquivo `.gitignore` para desconsiderar arquivos que não devam ser versionados.
 
-A implementação das soluções para os problemas propostos neste trabalho deverá ser realizada **até as 23h59 do dia 30 de abril de 2022**. Para fins de registro, o endereço do repositório criado pelo GitHub Classroom para cada equipe deverá ser enviado através da opção *Tarefas* na Turma Virtual do SIGAA.
+A implementação das soluções para os problemas propostos neste trabalho deverá ser realizada **até as 23h59 do dia 30 de abril de 2022** no respectivo repositório Git da equipe. Para fins de registro, o endereço do repositório também deverá ser enviado através da opção *Tarefas* na Turma Virtual do SIGAA. **Não serão aceitos envios por outros meios ou repositórios que não sejam os descritos nesta especificação.**
 
 ## Avaliação
-Este trabalho será avaliado sob os seguintes critérios: (i) a utilização correta dos recursos providos pela linguagem de programação C++; (ii) a corretude da execução dos programas implementados, que devem apresentar saída em conformidade com a especificação e as entradas de dados fornecidas; (iii) a aplicação de boas práticas de programação, incluindo legibilidade, organização e documentação de código fonte, e; (iv) a correta utilização do repositório Git, no qual deverá ser registrado todo o histórico da implementação por meio de *commits*. A avaliação do trabalho possuirá nota de até 10,0 pontos, distribuídos de acordo com a seguinte composição:
+A avaliação de cada uma das soluções para os problemas propostos contabilizará nota de até 2,0 pontos cada, totalizando 10,0 pontos. As soluções implementadas serão avaliadas de acordo com os seguintes critérios: 
 
-Por sua vez, o não cumprimento de algum dos critérios anteriormente especificados poderá resultar nos seguintes decréscimos, calculados sobre a nota obtida até então:
+1. utilização correta dos recursos providos pela linguagem de programação C++;
+2. corretude da execução dos programas implementados, que devem apresentar saída em conformidade com a especificação e as entradas de dados fornecidas;
+3. aplicação de boas práticas de programação, incluindo legibilidade, organização e documentação de código fonte, e;
+4. correta utilização do repositório Git, no qual deverá ser registrado todo o histórico da implementação por meio de *commits*. 
+
+O não cumprimento de algum dos critérios de avaliação especificados poderá resultar nos seguintes decréscimos, aplicados sobre a nota obtida até então na avaliação de cada solução:
+
+| Falta | Decréscimo |
+| :--- | ---: |
+| Programa apresenta erros de compilação, não executa ou apresenta saída incorreta | -70% |
+| Falta de comentários no código fonte e/ou de documentação gerada com Doxygen | -10% |
+| Uso inadequado de controle de versão com Git | -20% |
+| Implementação na linguagem C ou resultante de mistura entre as linguagens C e C++ | -30% |
+| Programa compila com mensagens de aviso (*warnings*) | -50% |
+| Plagiarismo | -100% |
