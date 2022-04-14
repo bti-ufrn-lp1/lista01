@@ -51,7 +51,7 @@ A título de exemplo, considere-se o projeto [`negativo5`](https://github.com/bt
        └─── main.cpp  ---> Arquivo fonte que precisa ser alterado para conter a solução [a ser editado]
 ```
 
-Após editar o arquivo `src/main.cpp` para implementar a solução para o problema, estando no diretório do projeto, deve-se executar os seguintes comandos:
+1. Após editar o arquivo `src/main.cpp` para implementar a solução para o problema, estando no diretório do projeto, deve-se executar os seguintes comandos:
 
 ```bash
 # Criar o diretório build dentro do diretório do projeto
@@ -59,14 +59,17 @@ mkdir build
 
 # Navegar para o diretório build criado
 cd build
+```
 
-# Gerar os arquivos intermediários no diretório build e o Makefile
+2. Executar o seguinte comando para gerar os arquivos intermediários no diretório `build` e o *makefile*:
+
+```bash
 cmake ..
 ```
 
 Um possível resultado da execução desses comandos, mostrado no terminal, seria:
 
-```bash
+```
 $ cd negativo5
 $ mkdir build
 $ cd build
@@ -81,6 +84,63 @@ $ cmake ..
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /negativo5/build
+```
+
+3. Em seguida, deve-se executar o comando `cmake` para compilar o projeto em questão. O comando fará a criação de um arquivo executável dentro do diretório `build` com o nome (genérico) `program`:
+
+```bash
+cmake --build .
+```
+
+Um possível resultado da execução desse comando, mostrado no terminal, seria:
+
+```
+$ cmake --build .
+Scanning dependencies of target func
+[ 20%] Building CXX object CMakeFiles/func.dir/src/function.cpp.o
+[ 40%] Linking CXX static library libfunc.a
+[ 40%] Built target func
+Scanning dependencies of target all_tests
+[ 60%] Building CXX object tests/CMakeFiles/all_tests.dir/main.cpp.o
+
+[ 80%] Building CXX object tests/CMakeFiles/all_tests.dir/test_01.cpp.o
+[100%] Linking CXX executable all_tests
+[100%] Built target all_tests
+```
+
+4. Caso haja erro de compilação, este deve ser corrigido e retorna-se ao passo 3. Caso a compilação seja bem-sucedida, deve-se executar o seguinte comando para navegar para o diretório `build` e executar os testes:
+
+```bash
+cd build
+cmake --build . --target verify
+```
+
+5. Ao observar os resultados dos testes, caso haja alguma falha, deve-se corrigir o problema e compilar o projeto novamente, como descrito no passo 3. Caso os testes sejam bem-sucedidos, um possível resultado da execução, mostrado no terminal, seria similar a:
+
+```
+$ cd build
+$ cmake --build . --target verify
+Scanning dependencies of target program
+[ 50%] Building CXX object CMakeFiles/program.dir/src/main.cpp.o
+[100%] Linking CXX executable program
+[100%] Built target program
+
+>>> RODANDO TESTES DE COMPARAÇÃO DE ENTRADA/SAÍDA ESPERADAS <<<
+
+[test 001]: OK
+[test 002]: OK
+[test 003]: OK
+[test 004]: OK
+[test 005]: OK
+
+Sumário dos testes:
+* Falhas........: 0
+* Erros E/S.....: 0
+* Erros Execução: 0
+* Sucessos......: 5
+
+>>> TESTE CONCLUÍDO COM SUCESSO! <<<
+[100%] Built target verify
 ```
 
 ### Implementação de função
