@@ -31,14 +31,59 @@ Para que seja possível compilar e executar os testes preparados para este traba
 ## Categorias de exercícios
 Existem duas categorias de exercícios neste trabalho: implementação de um **programa** e implementação de uma **função**. Cada uma dessas categorias requer tarefas de implementação, compilação e testes específicas, as quais são descritas a seguir
 
-### I
-Para os exercícios que solicitam a implementação de um programa, apenas o arquivo `main.cpp` deverá ser editado. Neste caso, deve-se assumir que os dados de entrada para cada programa são lidos a partir da entrada padrão, utilizando o operador de extração `>>` sobre o objeto `cin`, enquanto que os dados de saída devem ser enviados para a saída padrão, utilizando o operador de inserção `<<` sobre o objeto `cout`, como mostra o exemplo abaixo. Ambos os objetos são disponibilizados pela biblioteca de entrada/saída `[iostream](https://www.cplusplus.com/reference/iostream/)` integrante da linguagem C++.
+### Implementação de programa
+Para os exercícios que solicitam a implementação de um programa, apenas o arquivo `src/main.cpp` deverá ser editado. Neste caso, deve-se assumir que os dados de entrada para cada programa são lidos a partir da entrada padrão, utilizando o operador de extração `>>` sobre o objeto `cin`, enquanto que os dados de saída devem ser enviados para a saída padrão, utilizando o operador de inserção `<<` sobre o objeto `cout`, como mostra o exemplo abaixo. Ambos os objetos são disponibilizados pela biblioteca de entrada/saída `[iostream](https://www.cplusplus.com/reference/iostream/)` integrante da linguagem C++.
 
 ```c++
 int x;
 std::cin >> std::ws >> x;     // equivalente a scanf("%d", &x) em C
 std::cout << x << std::endl;  // equivalente a scanf("%d\n", x) em C
 ```
+A título de exemplo, considere-se o projeto [`negativo5`](https://github.com/bti-ufrn-lp1/lista01/tree/master/negativo5), o qual requer a implementação de um programa. O diretório desse projeto, assim como para qualquer outro que requer a implementação de um programa como solução, deverá estar organizado da seguinte forma:
+
+```
++─negativo5           ---> Nome do diretório do projeto
+  ├─── CMakeLists.txt ---> Script de configuração do cmake
+  ├─── build          ---> Diretório onde os arquivos executáveis serão gerados
+  ├─── data_expected  ---> Diretório que contém os arquivos de saída com as respostas corretas
+  ├─── data_in        ---> Diretório que contém os arquivos de entrada para os testes
+  └─── src            ---> Diretório que contém o arquivo fonte a ser editado
+       └─── main.cpp  ---> Arquivo fonte que precisa ser alterado para conter a solução [a ser editado]
+```
+
+Após editar o arquivo `src/main.cpp` para implementar a solução para o problema, estando no diretório do projeto, deve-se executar os seguintes comandos:
+
+```bash
+# Criar o diretório build dentro do diretório do projeto
+mkdir build
+
+# Navegar para o diretório build criado
+cd build
+
+# Gerar os arquivos intermediários no diretório build e o Makefile
+cmake ..
+```
+
+Um possível resultado da execução desses comandos, mostrado no terminal, seria:
+
+```bash
+$ cd negativo5
+$ mkdir build
+$ cd build
+$ cmake ..
+-- The CXX compiler identification is GNU 7.5.0
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compiler features
+-- Detecting CXX compiler features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /negativo5/build
+```
+
+### Implementação de função
 Para os exercícios que solicitam a implementação de uma função, é necessário alterar apenas o arquivo `function.cpp`. Esse arquivo contém o corpo vazio da função que precisa ser implementada. Neste caso, **não se deve alterar a assinatura da função**, pois, se isso ocorrer, os testes automatizados não funcionarão.
 
 ## Orientações Gerais
