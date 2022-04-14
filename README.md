@@ -15,7 +15,9 @@ As tarefas centrais a serem realizadas neste trabalho consistem em projetar e im
 4. [minmax](https://github.com/bti-ufrn-lp1/lista01/tree/master/minmax)
 5. [inverter](https://github.com/bti-ufrn-lp1/lista01/tree/master/inverter)
 
-A descrição de cada um desses problemas está em seu respectivo diretório, onde também deverá constar o código fonte das soluções implementadas. Cada um desses repositórios possui um código fonte base que poderá ser utilizado como ponto de partida para a implementação das soluções, havendo comentários na forma de `// TODO` apontando as alterações necessárias a fazer e onde elas devem ser feitas. Cada projeto já está preparado para ser compilado individualmente com o uso de `cmake`. Para que seja possível usufruir da infraestrutura de compilação e teste disponível, **não se deve alterar outros arquivos que não sejam aqueles indicados**. 
+A descrição de cada um desses problemas está em seu respectivo diretório, juntamente com exemplos de entradas e saídas esperados para o programa e uma relação dos recursos da linguagem de programação C++ necessários à implementação da solução. Cada um desses repositórios possui um código fonte base que poderá ser utilizado como ponto de partida para a implementação das soluções, havendo comentários na forma de `// TODO` apontando as alterações necessárias a fazer e onde elas devem ser feitas. Dessa forma, o código fonte das soluções implementadas deverá constar nos respectivos diretórios.
+
+Cada projeto já está preparado para ser compilado individualmente com o uso de `cmake`. Para que seja possível usufruir da infraestrutura de compilação e teste disponível, **não se deve alterar outros arquivos que não sejam aqueles indicados**. 
 
 ## Orientações Gerais
 No desenvolvimento das soluções aos problemas propostos, as seguintes observações deverão ser atendidas:
