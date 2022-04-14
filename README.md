@@ -9,13 +9,13 @@ De forma adicional, esta lista de exercícios também aborda elementos da [*Stan
 ## Tarefas
 As tarefas centrais a serem realizadas neste trabalho consistem em projetar e implementar, em C++, programas para cada um dos cinco seguintes problemas:
 
-1. negativo5
-3. soma_vizinhos
-4. fibonacci
-5. minmax
-6. inverter
+1. [negativo5](https://github.com/bti-ufrn-lp1/lista01/tree/master/negativo5)
+2. [soma_vizinhos](https://github.com/bti-ufrn-lp1/lista01/tree/master/soma_vizinhos)
+3. [fibonacci](https://github.com/bti-ufrn-lp1/lista01/tree/master/fibonacci)
+4. [minmax](https://github.com/bti-ufrn-lp1/lista01/tree/master/minmax)
+5. [inverter](https://github.com/bti-ufrn-lp1/lista01/tree/master/inverter)
 
-A descrição de cada um desses problemas está em seu respectivo diretório, onde também deverão constar o código fonte das soluções implementadas.
+A descrição de cada um desses problemas está em seu respectivo diretório, onde também deverá constar o código fonte das soluções implementadas. Cada um desses repositórios possui um código fonte base que poderá ser utilizado como ponto de partida para a implementação das soluções, havendo comentários na forma de `// TODO` apontando as alterações necessárias a fazer e onde elas devem ser feitas. Cada projeto já está preparado para ser compilado individualmente com o uso de `cmake`. Para que seja possível usufruir da infraestrutura de compilação e teste disponível, **não se deve alterar outros arquivos que não sejam aqueles indicados**. 
 
 ## Orientações Gerais
 No desenvolvimento das soluções aos problemas propostos, as seguintes observações deverão ser atendidas:
@@ -27,12 +27,14 @@ No desenvolvimento das soluções aos problemas propostos, as seguintes observa�
 5. Deve-se aplicar boas práticas de modularização, em termos da implementação de diferentes funções e separação entre arquivos cabeçalho (`.h`) e de corpo (`.cpp`).
 
 ## Autoria e Política de Colaboração
-**Este trabalho deverá necessariamente ser realizado em equipe composta de no máximo dois integrantes**, sendo importante, dentro do possível, dividir as tarefas igualmente entre os integrantes da equipe. O trabalho em cooperação entre estudantes da mesma turma ou de outras turmas é estimulado, sendo admissível a discussão de ideias e estratégias. Contudo, tal interação não deve ser entendida como permissão para utilização de (parte de) código fonte de colegas, o que pode caracterizar situação de plágio. Trabalhos copiados no todo ou em parte de outros colegas ou da Internet serão anulados e receberão nota zero.
+**Este trabalho deverá necessariamente ser realizado em equipe composta de no máximo dois integrantes**, sendo importante, dentro do possível, dividir as tarefas igualmente entre os integrantes da equipe. Após a implementação das soluções para os problemas propostas, o arquivo [`author.md`](https://github.com/bti-ufrn-lp1/lista01/blob/master/author.md) presente no repositório deverá ser editado preenchendo as informações de identificação dos integrantes da equipe, na seção [Informações de Autoria](https://github.com/bti-ufrn-lp1/lista01/blob/master/author.md#identificação-de-autoria) e informando-se quais dos problemas foram solucionados com sucesso, na seção [Soluções Implementadas](https://github.com/bti-ufrn-lp1/lista01/blob/master/author.md#soluções-implementadas). 
+
+O trabalho em cooperação entre estudantes da mesma turma ou de outras turmas é estimulado, sendo admissível a discussão de ideias e estratégias. Contudo, tal interação não deve ser entendida como permissão para utilização de (parte de) código fonte de colegas, o que pode caracterizar situação de plágio. Trabalhos copiados no todo ou em parte de outros colegas ou da Internet serão anulados e receberão nota zero.
 
 ## Entrega
 O sistema de controle de versões [Git](https://git-scm.com) e o serviço de hospedagem de repositórios [GitHub](https://git-scm.com) serão utilizados para possibilitar a entrega das implementações realizadas. Para possibilitar a associação de repositórios Git para cada equipe e reuni-los sob uma mesma infraestrutura, foi criada uma atividade (*assignment*) no [GitHub Classroom](https://classroom.github.com/classrooms). Um integrante de cada equipe deverá acessar este [link](https://classroom.github.com/a/lFZrVSk7) e aceitar o convite para ingressar na atividade. Feito isso, o próprio GitHub Classroom fará a criação de um repositório específico para a equipe em questão. Este [vídeo](https://youtu.be/ObaFRGp_Eko) demonstra como ocorre esse processo.
 
-O repositório Git criado pelo GitHub Classroom para cada equipe segue a mesma estrutura de diretórios presentes neste repositório. Todos os arquivos deverão constar no repositório obedecendo **estritamente** a divisão em diretórios, ou seja, os códigos fonte referentes às soluções implementadas deverão estar nos respectivos diretórios de cada problema. Além disso, o arquivo `author.md` presente no repositório deverá ser editado preenchendo as informações de identificação dos integrantes da equipe e informando-se quais dos problemas foram solucionados com sucesso. A fim de garantir a boa manutenção do repositório, deve-se ainda configurar corretamente o arquivo `.gitignore` para desconsiderar arquivos que não devam ser versionados.
+O repositório Git criado pelo GitHub Classroom para cada equipe segue a mesma estrutura de diretórios presentes neste repositório. Todos os arquivos deverão constar no repositório obedecendo **estritamente** a divisão em diretórios, ou seja, os códigos fonte referentes às soluções implementadas deverão estar nos respectivos diretórios de cada problema. A fim de garantir a boa manutenção do repositório, deve-se ainda configurar corretamente o arquivo `.gitignore` para desconsiderar arquivos que não devam ser versionados.
 
 A implementação das soluções para os problemas propostos neste trabalho deverá ser realizada **até as 23h59 do dia 30 de abril de 2022** no respectivo repositório Git da equipe. Para fins de registro, o endereço do repositório também deverá ser enviado através da opção *Tarefas* na Turma Virtual do SIGAA. **Não serão aceitos envios por outros meios ou repositórios que não sejam os descritos nesta especificação.**
 
