@@ -6,9 +6,15 @@ Implemente uma função em C++ chamada `fib_below_n` que recebe como parâmetro 
 ```c++
 std::vector<int> fib_below_n(unsigned int n);
 ```
-A sequência de Fibonacci define-se como uma sequencia de números inteiros na qual os dois primeiros termos são iguais a 1 e cada termo seguinte é a soma dos dois termos imediatamente anteriores. Desta forma, por exemplo, se fosse fornecida uma entrada com o valor 15, o programa deveria produzir a seguinte sequência de termos da série: `{1; 1; 2; 3; 5; 8; 13}`.
+
+## Exemplos de Entrada/Saída
+Entrada | Saída
+---- | :-----
+7 | `{1; 1; 2; 3; 5}`
+15 | `{1; 1; 2; 3; 5; 8; 13}`
+21 | `{1; 1; 2; 3; 5; 8; 13}`
 
 ## Conhecimentos Necessários
-- Utilização de funcões
+- Funções
 - Laços
-- Utilização da classe [`std::vector`](https://www.cplusplus.com/reference/vector/vector/) da *Standard Template Library* (STL), representando um vetor de tamanho dinâmico.
+- Classe [`std::vector`](https://www.cplusplus.com/reference/vector/vector/) da *Standard Template Library* (STL), representando um vetor de tamanho dinâmico.
