@@ -29,7 +29,7 @@ Para que seja possível compilar e executar os testes preparados para este traba
 - [Python 3+](https://www.python.org/), para executar o *script* de teste de comparação de saída gerada/esperada
 
 ## Categorias de exercícios
-Existem duas categorias de exercícios neste trabalho: implementação de um **programa** e implementação de uma **função**. Cada uma dessas categorias requer tarefas de implementação, compilação e testes específicas, as quais são descritas a seguir
+Existem duas categorias de exercícios neste trabalho: implementação de um **programa** e implementação de uma **função**. Cada uma dessas categorias requer tarefas de implementação, compilação e testes específicas, as quais são descritas a seguir.
 
 ### Implementação de programa
 Para os exercícios que solicitam a implementação de um programa, apenas o arquivo `src/main.cpp` deverá ser editado. Neste caso, deve-se assumir que os dados de entrada para cada programa são lidos a partir da entrada padrão, utilizando o operador de extração `>>` sobre o objeto `cin`, enquanto que os dados de saída devem ser enviados para a saída padrão, utilizando o operador de inserção `<<` sobre o objeto `cout`, como mostra o exemplo abaixo. Ambos os objetos são disponibilizados pela biblioteca de entrada/saída `[iostream](https://www.cplusplus.com/reference/iostream/)` integrante da linguagem C++.
@@ -48,7 +48,7 @@ A título de exemplo, considere-se o projeto [`negativo5`](https://github.com/bt
   ├─── data_expected  ---> Diretório que contém os arquivos de saída com as respostas corretas
   ├─── data_in        ---> Diretório que contém os arquivos de entrada para os testes
   └─── src            ---> Diretório que contém o arquivo fonte a ser editado
-       └─── main.cpp  ---> Arquivo fonte que precisa ser alterado para conter a solução [a ser editado]
+       └─── main.cpp  ---> Arquivo fonte que precisa ser alterado para conter a solução
 ```
 
 1. Após editar o arquivo `src/main.cpp` para implementar a solução para o problema, estando no diretório do projeto, deve-se executar os seguintes comandos:
@@ -86,7 +86,7 @@ $ cmake ..
 -- Build files have been written to: /negativo5/build
 ```
 
-3. Em seguida, deve-se executar o comando `cmake` para compilar o projeto em questão. O comando fará a criação de um arquivo executável dentro do diretório `build` com o nome (genérico) `program`:
+3. Em seguida, deve-se executar o comando abaixo para compilar o projeto em questão, o qual criará um arquivo executável dentro do diretório `build` com o nome (genérico) `program`:
 
 ```bash
 cmake --build .
@@ -144,7 +144,77 @@ Sumário dos testes:
 ```
 
 ### Implementação de função
-Para os exercícios que solicitam a implementação de uma função, é necessário alterar apenas o arquivo `function.cpp`. Esse arquivo contém o corpo vazio da função que precisa ser implementada. Neste caso, **não se deve alterar a assinatura da função**, pois, se isso ocorrer, os testes automatizados não funcionarão.
+Para os exercícios que solicitam a implementação de uma função, é necessário alterar apenas o arquivo `src/function.cpp`. Esse arquivo contém o corpo vazio da função que precisa ser implementada. Neste caso, **não se deve alterar a assinatura da função**, pois, se isso ocorrer, os testes automatizados não funcionarão.
+
+A título de exemplo, considere-se o projeto [`fibonacci`](https://github.com/bti-ufrn-lp1/lista01/tree/master/fibonacci), o qual requer a implementação de uma função. O diretório desse projeto, assim como para qualquer outro que requer a implementação de uma função como solução, deverá estar organizado da seguinte forma:
+
+```
++─fibonacci               ---> Nome do diretório do projeto
+  ├─── CMakeLists.txt     ---> Script de configuração do cmake
+  ├─── build              ---> Diretório onde os arquivos executáveis serão gerados
+  |─── tests              ---> Diretório que contém arquivos para teste unitário
+  └─── src                ---> Diretório que contém o arquivo fonte a ser editado
+       └─── function.h    ---> Arquivo de cabeçalho com a definição da assinatura da função
+       └─── function.cpp  ---> Arquivo fonte que precisa ser alterado para conter a solução
+```
+
+1. Após editar o arquivo `src/function.cpp` para implementar a solução para o problema, estando no diretório do projeto, deve-se executar os seguintes comandos:
+
+```bash
+# Criar o diretório build dentro do diretório do projeto
+mkdir build
+
+# Navegar para o diretório build criado
+cd build
+```
+
+2. Executar o seguinte comando para gerar os arquivos intermediários no diretório `build` e o *makefile*:
+
+```bash
+cmake ..
+```
+
+3. Em seguida, executar o seguinte comando para compilar o projeto dentro diretório `build`, o qual criará nesse diretório uma biblioteca estática contendo a função implementada, `libfunc.a`, e um arquivo executável para executar os testes unitários, `tests/all_tests`:
+
+```bash
+cmake --build .
+```
+
+Um possível resultado da execução desse comando, mostrado no terminal, seria:
+
+```
+$ cmake --build .
+Scanning dependencies of target func
+[ 20%] Building CXX object CMakeFiles/func.dir/src/function.cpp.o
+[ 40%] Linking CXX static library libfunc.a
+[ 40%] Built target func
+Scanning dependencies of target all_tests
+[ 60%] Building CXX object tests/CMakeFiles/all_tests.dir/main.cpp.o
+
+[ 80%] Building CXX object tests/CMakeFiles/all_tests.dir/test_01.cpp.o
+[100%] Linking CXX executable all_tests
+[100%] Built target all_tests
+```
+
+4. Caso haja erro de compilação, este deve ser corrigido e retorna-se ao passo 3. Caso a compilação seja bem-sucedida, deve-se executar o seguinte comando para navegar para o diretório `build` e executar os testes:
+
+```bash
+cd build
+cmake --build . --target run_tests
+```
+
+5. Ao observar os resultados dos testes, caso haja alguma falha, deve-se corrigir o problema e compilar o projeto novamente, como descrito no passo 3. Caso os testes sejam bem-sucedidos, um possível resultado da execução, mostrado no terminal, seria similar a:
+
+```
+$ cd build
+$ cmake --build . --target run_tests
+[ 40%] Built target func
+[100%] Built target all_tests
+===============================================================
+All tests passed (16 assertions in 5 test cases)
+
+[100%] Built target run_tests
+```
 
 ## Orientações Gerais
 No desenvolvimento das soluções aos problemas propostos, as seguintes observações deverão ser atendidas:
