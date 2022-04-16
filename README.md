@@ -82,23 +82,22 @@ cd build
 cmake ..
 ```
 
-Um possível resultado da execução desses comandos, mostrado no terminal, seria:
+O resultado da execução desses comandos mostrado no terminal seria similar a:
 
 ```
 $ cd negativo5
 $ mkdir build
 $ cd build
 $ cmake ..
--- The CXX compiler identification is GNU 7.5.0
--- Check for working CXX compiler: /usr/bin/c++
--- Check for working CXX compiler: /usr/bin/c++ -- works
+-- The CXX compiler identification is AppleClang 11.0.0.11000033
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
--- Detecting CXX compiler features
--- Detecting CXX compiler features - done
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /negativo5/build
+-- Build files have been written to: .../negativo5/build
 ```
 
 3. Como próximo passo, deve-se executar o comando abaixo para compilar o projeto em questão, o qual criará um arquivo executável dentro do diretório `build` com o nome (genérico) `program`:
@@ -107,54 +106,53 @@ $ cmake ..
 cmake --build .
 ```
 
-Um possível resultado da execução desse comando, mostrado no terminal, seria:
+Um possível resultado da execução desse comando, mostrado no terminal, seria similar a:
 
 ```
 $ cmake --build .
-Scanning dependencies of target func
-[ 20%] Building CXX object CMakeFiles/func.dir/src/function.cpp.o
-[ 40%] Linking CXX static library libfunc.a
-[ 40%] Built target func
-Scanning dependencies of target all_tests
-[ 60%] Building CXX object tests/CMakeFiles/all_tests.dir/main.cpp.o
-
-[ 80%] Building CXX object tests/CMakeFiles/all_tests.dir/test_01.cpp.o
-[100%] Linking CXX executable all_tests
-[100%] Built target all_tests
-```
-
-4. Caso haja erro de compilação, este deve ser corrigido e retorna-se ao passo 3. Caso a compilação seja bem-sucedida, deve-se executar o seguinte comando para navegar para o diretório `build` e executar os testes:
-
-```bash
-cd build
-cmake --build . --target verify
-```
-
-5. Ao observar os resultados dos testes, caso haja alguma falha, deve-se corrigir o problema e compilar o projeto novamente conforme descrito no passo 3. Caso os testes sejam bem-sucedidos, um possível resultado da execução, mostrado no terminal, seria similar a:
-
-```
-$ cd build
-$ cmake --build . --target verify
-Scanning dependencies of target program
 [ 50%] Building CXX object CMakeFiles/program.dir/src/main.cpp.o
 [100%] Linking CXX executable program
 [100%] Built target program
+```
 
->>> RODANDO TESTES DE COMPARAÇÃO DE ENTRADA/SAÍDA ESPERADAS <<<
+```bash
+./program
+```
 
-[test 001]: OK
-[test 002]: OK
-[test 003]: OK
-[test 004]: OK
-[test 005]: OK
+4. Caso haja erro de compilação, este deve ser corrigido e retorna-se ao passo 3. Caso a compilação seja bem-sucedida, o arquivo executável referente ao programa gerado dentro do diretório `build` pode ser executado através do seguinte comando no terminal:
+
+```bash
+cmake --build .
+```
+
+5. Para executar os testes automatizados (caso a compilação tenha sido bem-sucedida e o programa executável tenha sido gerado corretamente), deve-se executar o seguinte comando dentro do diretório `build`:
+
+```bash
+cmake --build . --target verify
+```
+
+6. Ao observar os resultados dos testes, caso haja alguma falha, deve-se corrigir o problema e compilar o projeto novamente conforme descrito no passo 3. Caso os testes sejam bem-sucedidos, um possível resultado da execução, mostrado no terminal, seria similar a:
+
+```
+$ cmake --build . --target verify
+Consolidate compiler generated dependencies of target program
+[100%] Built target program
+
+>>> RODANDO TESTES DE COMPARAÇÃO DE ENTRADA/SAÍDA ESPERADAS <<< 
+
+[test 01: all-negatives]: OK
+[test 02: 4-negatives]: OK
+[test 03: all-zeros]: OK
+[test 04: no-negatives]: OK
+[test 05: 2-negatives]: OK
 
 Sumário dos testes:
-* Falhas........: 0
-* Erros E/S.....: 0
-* Erros Execução: 0
-* Sucessos......: 5
+• Falhas........: 0
+• Erros E/S.....: 0
+• Erros Execução: 0
+• Sucessos......: 5
 
->>> TESTE CONCLUÍDO COM SUCESSO! <<<
+>>> TESTE CONCLUÍDO COM SUCESSO! <<< 
 [100%] Built target verify
 ```
 
