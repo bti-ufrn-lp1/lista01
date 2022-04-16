@@ -50,7 +50,7 @@ Para os exercícios que solicitam a implementação de um programa, apenas o arq
 
 ```c++
 int x;
-std::cin >> x;                // equivalente a scanf("%d", &x) em C
+std::cin >> std::ws >> x;     // equivalente a scanf("%d", &x) em C
 std::cout << x << std::endl;  // equivalente a scanf("%d\n", x) em C
 ```
 
