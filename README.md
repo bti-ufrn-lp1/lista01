@@ -50,7 +50,7 @@ Para os exercícios que solicitam a implementação de um programa, apenas o arq
 
 ```c++
 int x;
-std::cin >> std::ws >> x;     // equivalente a scanf("%d", &x) em C
+std::cin >> x;                // equivalente a scanf("%d", &x) em C
 std::cout << x << std::endl;  // equivalente a scanf("%d\n", x) em C
 ```
 
@@ -185,6 +185,24 @@ cd build
 
 ```bash
 cmake ..
+```
+
+O resultado da execução desses comandos mostrado no terminal seria similar a:
+
+```
+$ cd fibonacci
+$ mkdir build
+$ cd build
+$ cmake ..
+-- The CXX compiler identification is AppleClang 11.0.0.11000033
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: .../fibonacci/build
 ```
 
 3. Em seguida, deve-se executar o seguinte comando para compilar o projeto dentro diretório `build`, o qual criará nesse diretório uma biblioteca estática contendo a função implementada, `libfunc.a`, e um arquivo executável para executar os testes unitários, `tests/all_tests`:
