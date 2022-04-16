@@ -1,7 +1,20 @@
 # Lista 1: Elementos fundamentais de programação em C++
 <sub>Última atualização: 15/04/2022</sub>
 
-## Visão Geral e Objetivos
+## Sumário
+- [Visão geral e objetivos](#visão-geral-e-objetivos)  
+- [Tarefas](#tarefas)
+- [Requisitos](#requisitos)
+- [Categorias de exercícios](#categorias-de-exercícios)
+  - [Implementação de programa](#implementação-de-programa)
+  - [Implementação de função](#implementação-de-função)
+- [Orientações gerais](#orientações-gerais)
+- [Autoria e política de colaboração](#autoria-e-política-de-colaboração)
+- [Entrega](#entrega)
+- [Avaliação](#avaliação)
+- [Dúvidas e informações](#dúvidas-e-informações)
+
+## Visão geral e objetivos
 O objetivo desta lista de exercícios é colocar em prática as habilidades de **interpretar especificações de problemas** e projetar e implementar uma soluções na forma de programas na linguagem de programação C++. Para tanto, esta lista explora elementos fundamentais da programação em C++, como laços, estruturas condicionais simples e compostas, tipos de dados básicos e heterogêneos expressões lógicas, passagem de parâmetros, criação de funções, leitura de escrita de informações a partir da entrada e saída padrão, dentre outros.
 
 De forma adicional, esta lista de exercícios também aborda elementos da [*Standard Template Library* (STL)](https://en.wikipedia.org/wiki/Standard_Template_Library). A STL integra a biblioteca da linguagem de programação C++ provendo um conjunto de classes referentes a estruturas de dados comuns como vetor, lista, pilha, etc. (*containers*), bem como algoritmos e iteradores para operarem sobre tais estruturas. Todos esses elementos são genéricos, sendo, portanto, capazes de lidar com quaisquer tipos de dados.
@@ -218,7 +231,7 @@ All tests passed (16 assertions in 5 test cases)
 [100%] Built target run_tests
 ```
 
-## Orientações Gerais
+## Orientações gerais
 No desenvolvimento das soluções aos problemas propostos, as seguintes observações deverão ser atendidas:
 
 1. Apesar da completa compatibilidade entre as linguagens de programação C e C++, o código fonte produzido **não** deverá conter recursos da linguagem C nem ser resultante da mescla entre as duas linguagens. Dessa forma, deverão ser utilizados **estritamente** recursos da linguagem C++.
@@ -226,7 +239,7 @@ No desenvolvimento das soluções aos problemas propostos, as seguintes observa�
 3. Boas práticas de programação deverão ser constantemente aplicadas. Os programas deverão ser codificados de forma legível (com indentação de código fonte, nomes consistentes, etc.) e documentados adequadamente na forma de comentários. O código fonte deverá ainda ser anotado para dar suporte à geração automática de documentação utilizando a ferramenta [Doxygen](https://www.doxygen.nl/). O documento de apoio disponível neste [link](https://drive.google.com/file/d/1YA1KxASCNY3B8APowD2V0sL-kAso9g86/view) contém algumas instruções acerca do padrão de documentação e uso do Doxygen.
 4. As soluções deverão ser desenvolvidas com qualidade, garantindo que o programa funcione de forma correta e eficiente. Deve-se também pensar nas possíveis entradas que poderão ser utilizadas para testar apropriadamente cada programa, além de serem tratadas adequadamente possíveis entradas consideradas inválidas.
 
-## Autoria e Política de Colaboração
+## Autoria e política de colaboração
 **Este trabalho deverá necessariamente ser realizado em equipe composta de dois estudantes**, sendo importante, dentro do possível, dividir as tarefas igualmente entre os integrantes da equipe. Após a implementação das soluções para os problemas propostos, o arquivo [`author.md`](https://github.com/bti-ufrn-lp1/lista01/blob/master/author.md) presente no repositório deverá ser editado preenchendo as informações de identificação dos integrantes da equipe, na seção [Informações de Autoria](https://github.com/bti-ufrn-lp1/lista01/blob/master/author.md#identificação-de-autoria) e informando-se quais dos problemas foram solucionados com sucesso, na seção [Soluções Implementadas](https://github.com/bti-ufrn-lp1/lista01/blob/master/author.md#soluções-implementadas). 
 
 O trabalho em cooperação entre estudantes da mesma turma ou de outras turmas é estimulado, sendo admissível a discussão de ideias e estratégias. Contudo, tal interação não deve ser entendida como permissão para utilização de (parte de) código fonte de colegas, o que pode caracterizar situação de plágio. Trabalhos copiados no todo ou em parte de outros colegas ou da Internet serão anulados e receberão nota zero.
@@ -257,7 +270,7 @@ O não cumprimento de algum dos critérios de avaliação especificados poderá 
 | Programa compila com mensagens de aviso (*warnings*) | -50% |
 | Plagiarismo | -100% |
 
-## Dúvidas e Informações
+## Dúvidas e informações
 Caso haja qualquer dúvida, questionamento ou necessidade de informação adicional, é possível:
 - enviar *e-mail* para o endereço everton.cavalcante@ufrn.br;
 - enviar mensagem privada diretamente ao docente, utilizando o servidor Discord;
