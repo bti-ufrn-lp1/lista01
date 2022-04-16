@@ -115,14 +115,10 @@ $ cmake --build .
 [100%] Built target program
 ```
 
-```bash
-./program
-```
-
 4. Caso haja erro de compilação, este deve ser corrigido e retorna-se ao passo 3. Caso a compilação seja bem-sucedida, o arquivo executável referente ao programa gerado dentro do diretório `build` pode ser executado através do seguinte comando no terminal:
 
 ```bash
-cmake --build .
+./program
 ```
 
 5. Para executar os testes automatizados (caso a compilação tenha sido bem-sucedida e o programa executável tenha sido gerado corretamente), deve-se executar o seguinte comando dentro do diretório `build`:
@@ -159,10 +155,10 @@ Sumário dos testes:
 ### Implementação de função
 Para os exercícios que solicitam a implementação de uma função, é necessário alterar apenas o arquivo `src/function.cpp`. Esse arquivo contém o corpo vazio da função que precisa ser implementada. Neste caso, **não se deve alterar a assinatura da função**, pois, se isso ocorrer, os testes automatizados não funcionarão.
 
-A título de exemplo, considere-se o projeto [`fibonacci`](https://github.com/bti-ufrn-lp1/lista01/tree/master/fibonacci), o qual requer a implementação de uma função. O diretório desse projeto, assim como para qualquer outro que requer a implementação de uma função como solução, deverá estar organizado da seguinte forma:
+A título de exemplo, considere-se o projeto [`inverter`](https://github.com/bti-ufrn-lp1/lista01/tree/master/inverter), o qual requer a implementação de uma função. O diretório desse projeto, assim como para qualquer outro que requer a implementação de uma função como solução, deverá estar organizado da seguinte forma:
 
 ```
-+─fibonacci               ---> Nome do diretório do projeto
++─inverter                ---> Nome do diretório do projeto
   ├─── CMakeLists.txt     ---> Script de configuração do cmake
   ├─── build              ---> Diretório onde os arquivos executáveis serão gerados
   |─── tests              ---> Diretório que contém arquivos para teste unitário
@@ -190,7 +186,7 @@ cmake ..
 O resultado da execução desses comandos mostrado no terminal seria similar a:
 
 ```
-$ cd fibonacci
+$ cd inverter
 $ mkdir build
 $ cd build
 $ cmake ..
@@ -202,7 +198,7 @@ $ cmake ..
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: .../fibonacci/build
+-- Build files have been written to: .../inverter/build
 ```
 
 3. Em seguida, deve-se executar o seguinte comando para compilar o projeto dentro diretório `build`, o qual criará nesse diretório uma biblioteca estática contendo a função implementada, `libfunc.a`, e um arquivo executável para executar os testes unitários, `tests/all_tests`:
@@ -215,36 +211,40 @@ Um possível resultado da execução desse comando, mostrado no terminal, seria:
 
 ```
 $ cmake --build .
-Scanning dependencies of target func
 [ 20%] Building CXX object CMakeFiles/func.dir/src/function.cpp.o
 [ 40%] Linking CXX static library libfunc.a
 [ 40%] Built target func
-Scanning dependencies of target all_tests
-[ 60%] Building CXX object tests/CMakeFiles/all_tests.dir/main.cpp.o
-
-[ 80%] Building CXX object tests/CMakeFiles/all_tests.dir/test_01.cpp.o
+[ 60%] Building CXX object CMakeFiles/all_tests.dir/tests/lib/test_manager/src/test_manager.cpp.o
+[ 80%] Building CXX object CMakeFiles/all_tests.dir/tests/main.cpp.o
 [100%] Linking CXX executable all_tests
 [100%] Built target all_tests
 ```
 
-4. Caso haja erro de compilação, este deve ser corrigido e retorna-se ao passo 3. Caso a compilação seja bem-sucedida, deve-se executar o seguinte comando para navegar para o diretório `build` e executar os testes:
+Caso haja erro de compilação, este deve ser corrigido e retorna-se ao passo 3. 
+
+4. Para executar os testes automatizados (caso a compilação tenha sido bem-sucedida), deve-se executar o seguinte comando dentro do `build`:
 
 ```bash
-cd build
 cmake --build . --target run_tests
 ```
 
 5. Ao observar os resultados dos testes, caso haja alguma falha, deve-se corrigir o problema e compilar o projeto novamente, conforme descrito no passo 3. Caso os testes sejam bem-sucedidos, um possível resultado da execução, mostrado no terminal, seria similar a:
 
 ```
-$ cd build
 $ cmake --build . --target run_tests
 [ 40%] Built target func
 [100%] Built target all_tests
-===============================================================
-All tests passed (16 assertions in 5 test cases)
-
-[100%] Built target run_tests
+[===========] Running 4 from the "Test Set" test suite.
+[ RUN       ] Vetor vazio-> [reverse]
+[        OK ]
+[ RUN       ] Inverte vetor tamanho ímpar-> [reverse]
+[        OK ]
+[ RUN       ] Inverte vetor tamanho par-> [reverse]
+[        OK ]
+[ RUN       ] Vetor com 1 elemento-> [reverse]
+[        OK ]
+[===========] 4 tests from the "Test Set" test suite ran.
+[ PASSED    ] 4 tests.
 ```
 
 ## Orientações gerais
