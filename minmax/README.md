@@ -1,15 +1,24 @@
-# Minmax
+# `minmax`
+<sup>Última atualização: 15/04/2022</sup>
 
-Escreva uma função em C++ chamada _min\_max_ que recebe como parâmetro um vetor _V_ com _n_ números inteiros, identifica e retorna um _par_ de valores correspondentes
-aos índices da primeira ocorrência do menor elemento e da última ocorrência do maior elemento presente em _V_. Por exemplo, se a entrada fosse `V={5,4,1,3,1,10,7,10,6,8}`
-a função deveria retornar o par `{2,7}`, correspondente às posições do primeiro _'1'_ em V\[2\] e do último _'10'_ na posição V\[7\].
+Escreva uma função em C++ chamada `min_max` que recebe como parâmetro um vetor *V* com *n* números inteiros, identifica e retorna um par de valores correspondendo aos índices da primeira ocorrência do menor elemento e da última ocorrência do maior elemento presentes em *V*. Esse par será um objeto da classe utilitária [`std::pair`](https://www.cplusplus.com/reference/utility/pair/pair/).
 
-Um par de valores pode ser retornado por uma função através de um struct, vetor ou utilizando a classe utilitária `std::pair`, nesta questão usaremos a `std::pair`. Assim
-a função deve ter a seguinte assinatura:
+A função deve ter a seguinte assinatura:
+
 ```c++
-std::pair <size_t ,size_t> min_max ( int V[], size_t n );
+std::pair <size_t ,size_t> min_max (int V[], size_t n);
 ```
 
-## Conhecimentos necessários
+## Exemplos de Entrada/Saída
+Entrada | Saída
+:---------- | :-----
+{5, 4, 1, 3, 1, 10, 7, 10, 6, 8} | `{2, 7}` (posição `2` do primeiro 1, posição `7` do último 10)
+{8, 12, 12, 5, 9, 2, 2, 4, 6, 8} | `{5, 2}` (posição `5` do primeiro 2, posição `2` do último 12)
 
-Utilização de função, passagem de vetor por parâmetro, utilização da classe `std::pair`, retorno de funçao com tipo composto, condicionais, laços.
+## Conhecimentos Necessários
+- Função
+- Passagem de vetor por parâmetro
+- Estruturas condicionais
+- Laços
+- Classe [`std::pair`](https://www.cplusplus.com/reference/utility/pair/pair/), definida na biblioteca [`utility`](https://www.cplusplus.com/reference/utility/)
+- Retorno de funçao com tipo composto
