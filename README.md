@@ -1,5 +1,5 @@
 # Lista 1: Elementos fundamentais de programação em C++
-<sub>Última atualização: 14/04/2022</sub>
+<sub>Última atualização: 15/04/2022</sub>
 
 ## Visão Geral e Objetivos
 O objetivo desta lista de exercícios é colocar em prática as habilidades de **interpretar especificações de problemas** e projetar e implementar uma soluções na forma de programas na linguagem de programação C++. Para tanto, esta lista explora elementos fundamentais da programação em C++, como laços, estruturas condicionais simples e compostas, tipos de dados básicos e heterogêneos expressões lógicas, passagem de parâmetros, criação de funções, leitura de escrita de informações a partir da entrada e saída padrão, dentre outros.
@@ -24,6 +24,7 @@ Por fim, caso se deseje criar outros arquivos fonte para melhor modularizar o pr
 ## Requisitos
 Para que seja possível compilar e executar os testes preparados para este trabalho, é necessário que os seguintes elementos estejam instalados no ambiente de desenvolvimento:
 
+- [Git](https://git-scm.com), como sistema de controle de versões
 - [*GNU Compiler Collection*](https://gcc.gnu.org) (a qual inclui o compilador `g++`), [`clang`](https://clang.llvm.org/) ou qualquer outro compilador para a linguagem C++
 - [`cmake`](https://cmake.org/), para gerar *makefiles* automaticamente e de forma otimizada para o projeto
 - [Python 3+](https://www.python.org/), para executar o *script* de teste de comparação de saída gerada/esperada
