@@ -255,3 +255,13 @@ O não cumprimento de algum dos critérios de avaliação especificados poderá 
 | Implementação na linguagem C ou resultante de mistura entre as linguagens C e C++ | -30% |
 | Programa compila com mensagens de aviso (*warnings*) | -50% |
 | Plagiarismo | -100% |
+
+## Dúvidas e Informações
+Caso haja qualquer dúvida, questionamento ou necessidade de informação adicional, é possível:
+- enviar *e-mail* para o endereço everton.cavalcante@ufrn.br;
+- enviar mensagem privada diretamente ao docente, utilizando o servidor Discord;
+- enviar mensagem no canal de texto `#geral-dim0120-t02`, especificamente associado à turma no servidor Discord;
+- enviar mensagem no canal de texto `#duvidas` no servidor Discord, comum a todas as turmas da disciplina;
+- realizar encontros síncronos presenciais, no horário e local de aula;
+- agendar encontros síncronos por videoconferência, ou;
+- agendar encontros síncronos pelo canal de áudio `Fale com Prof. Everton` no servidor Discord.
