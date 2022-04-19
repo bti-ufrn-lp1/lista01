@@ -1,5 +1,5 @@
 # Lista 1: Elementos fundamentais de programação em C++
-<sub>Última atualização: 15/04/2022</sub>
+<sub>Última atualização: 18/04/2022</sub>
 
 ## Sumário
 - [Visão geral e objetivos](#visão-geral-e-objetivos)  
@@ -115,13 +115,9 @@ $ cmake --build .
 [100%] Built target program
 ```
 
-4. Caso haja erro de compilação, este deve ser corrigido e retorna-se ao passo 3. Caso a compilação seja bem-sucedida, o arquivo executável referente ao programa gerado dentro do diretório `build` pode ser executado através do seguinte comando no terminal:
+4. Caso haja erro de compilação, este deve ser corrigido e retorna-se ao passo 3.
 
-```bash
-./program
-```
-
-5. Para executar os testes automatizados (caso a compilação tenha sido bem-sucedida e o programa executável tenha sido gerado corretamente), deve-se executar o seguinte comando dentro do diretório `build`:
+5. Caso a compilação tenha sido bem-sucedida e o programa executável `program` tenha sido gerado corretamente, deve-se executar o seguinte comando dentro do diretório `build` para executar os testes automatizados:
 
 ```bash
 cmake --build . --target verify
@@ -220,15 +216,15 @@ $ cmake --build .
 [100%] Built target all_tests
 ```
 
-Caso haja erro de compilação, este deve ser corrigido e retorna-se ao passo 3. 
+4. Caso haja erro de compilação, este deve ser corrigido e retorna-se ao passo 3. 
 
-4. Para executar os testes automatizados (caso a compilação tenha sido bem-sucedida), deve-se executar o seguinte comando dentro do `build`:
+5. Caso a compilação tenha sido bem-sucedida, deve-se executar o seguinte comando dentro do `build` para executar os testes automatizados:
 
 ```bash
 cmake --build . --target run_tests
 ```
 
-5. Ao observar os resultados dos testes, caso haja alguma falha, deve-se corrigir o problema e compilar o projeto novamente, conforme descrito no passo 3. Caso os testes sejam bem-sucedidos, um possível resultado da execução, mostrado no terminal, seria similar a:
+6. Ao observar os resultados dos testes, caso haja alguma falha, deve-se corrigir o problema e compilar o projeto novamente, conforme descrito no passo 3. Caso os testes sejam bem-sucedidos, um possível resultado da execução, mostrado no terminal, seria similar a:
 
 ```
 $ cmake --build . --target run_tests
@@ -251,9 +247,8 @@ $ cmake --build . --target run_tests
 No desenvolvimento das soluções aos problemas propostos, as seguintes observações deverão ser atendidas:
 
 1. Apesar da completa compatibilidade entre as linguagens de programação C e C++, o código fonte produzido **não** deverá conter recursos da linguagem C nem ser resultante da mescla entre as duas linguagens. Dessa forma, deverão ser utilizados **estritamente** recursos da linguagem C++.
-2. Durante a compilação do código fonte, a exibição de mensagens de aviso (*warnings*) deverá ser habilitada por meio de *flags* passadas ao compilador, uma vez que elas podem dar indícios de que o programa potencialmente possui problemas em sua implementação que podem se manifestar durante sua execução.
-3. Boas práticas de programação deverão ser constantemente aplicadas. Os programas deverão ser codificados de forma legível (com indentação de código fonte, nomes consistentes, etc.) e documentados adequadamente na forma de comentários. O código fonte deverá ainda ser anotado para dar suporte à geração automática de documentação utilizando a ferramenta [Doxygen](https://www.doxygen.nl/). O documento de apoio disponível neste [link](https://drive.google.com/file/d/1YA1KxASCNY3B8APowD2V0sL-kAso9g86/view) contém algumas instruções acerca do padrão de documentação e uso do Doxygen.
-4. As soluções deverão ser desenvolvidas com qualidade, garantindo que o programa funcione de forma correta e eficiente. Deve-se também pensar nas possíveis entradas que poderão ser utilizadas para testar apropriadamente cada programa, além de serem tratadas adequadamente possíveis entradas consideradas inválidas.
+2. Boas práticas de programação deverão ser constantemente aplicadas. Os programas deverão ser codificados de forma legível (com indentação de código fonte, nomes consistentes, etc.) e documentados adequadamente na forma de comentários. O código fonte deverá ainda ser anotado para dar suporte à geração automática de documentação utilizando a ferramenta [Doxygen](https://www.doxygen.nl/). O documento de apoio disponível neste [link](https://drive.google.com/file/d/1YA1KxASCNY3B8APowD2V0sL-kAso9g86/view) contém algumas instruções acerca do padrão de documentação e uso do Doxygen.
+3. As soluções deverão ser desenvolvidas com qualidade, garantindo que o programa funcione de forma correta e eficiente. Deve-se também pensar nas possíveis entradas que poderão ser utilizadas para testar apropriadamente cada programa, além de serem tratadas adequadamente possíveis entradas consideradas inválidas. A execução dos testes automatizados é útil para identificar esses tipos de casos.
 
 ## Autoria e política de colaboração
 **Este trabalho deverá necessariamente ser realizado em equipe composta de dois estudantes**, sendo importante, dentro do possível, dividir as tarefas igualmente entre os integrantes da equipe. Após a implementação das soluções para os problemas propostos, o arquivo [`author.md`](https://github.com/bti-ufrn-lp1/lista01/blob/master/author.md) presente no repositório deverá ser editado preenchendo as informações de identificação dos integrantes da equipe, na seção [Informações de Autoria](https://github.com/bti-ufrn-lp1/lista01/blob/master/author.md#identificação-de-autoria) e informando-se quais dos problemas foram solucionados com sucesso, na seção [Soluções Implementadas](https://github.com/bti-ufrn-lp1/lista01/blob/master/author.md#soluções-implementadas). 
@@ -261,9 +256,9 @@ No desenvolvimento das soluções aos problemas propostos, as seguintes observa�
 O trabalho em cooperação entre estudantes da mesma turma ou de outras turmas é estimulado, sendo admissível a discussão de ideias e estratégias. Contudo, tal interação não deve ser entendida como permissão para utilização de (parte de) código fonte de colegas, o que pode caracterizar situação de plágio. Trabalhos copiados no todo ou em parte de outros colegas ou da Internet serão anulados e receberão nota zero.
 
 ## Entrega
-O sistema de controle de versões [Git](https://git-scm.com) e o serviço de hospedagem de repositórios [GitHub](https://git-scm.com) serão utilizados para possibilitar a entrega das implementações realizadas. Para possibilitar a associação de repositórios Git para cada equipe e reuni-los sob uma mesma infraestrutura, foi criada uma atividade (*assignment*) no GitHub Classroom. Um integrante de cada equipe deverá acessar este [*link*](https://classroom.github.com/a/lFZrVSk7) e aceitar o convite para ingressar no GitHub Classroom. Uma vez aceito o convite, será exibida a atividade referente a ester trabalho e o próprio GitHub Classroom fará a criação de um repositório específico para a equipe em questão. Este [vídeo](https://youtu.be/ObaFRGp_Eko) demonstra como ocorre esse processo.
+O sistema de controle de versões [Git](https://git-scm.com) e o serviço de hospedagem de repositórios [GitHub](https://git-scm.com) serão utilizados para possibilitar a entrega das implementações realizadas. Para possibilitar a associação de repositórios Git para cada equipe e reuni-los sob uma mesma infraestrutura, foi criada uma atividade (*assignment*) no GitHub Classroom. Cada integrante de equipe deverá acessar este [*link*](https://classroom.github.com/a/lFZrVSk7), aceitar o convite para ingressar no GitHub Classroom e finalmente seguir as instruções em tela para acessar a atividade e ingressar em uma equipe existente ou criar outra. Este [vídeo](https://youtu.be/ObaFRGp_Eko) demonstra como ocorre esse processo.
 
-O repositório Git criado pelo GitHub Classroom para cada equipe segue a mesma estrutura de diretórios presentes neste repositório. Todos os arquivos deverão constar no repositório obedecendo **estritamente** a divisão em diretórios, ou seja, os códigos fonte referentes às soluções implementadas deverão estar nos respectivos diretórios de cada problema. A fim de garantir a boa manutenção do repositório, deve-se ainda configurar corretamente o arquivo `.gitignore` para desconsiderar arquivos que não devam ser versionados.
+No momento de criação de uma equipe, o GitHub Classroom cria um repositório Git privado acessível unicamente pelos integrantes da equipe e pelo docente, sob a organização [`bti-ufrn-lp1`](https://github.com/bti-ufrn-lp1). Esse repositório segue a mesma estrutura de diretórios presentes neste repositório, o qual serve de *template*. Todos os arquivos deverão constar no repositório obedecendo **estritamente** a divisão em diretórios, ou seja, os códigos fonte referentes às soluções implementadas deverão estar nos respectivos diretórios de cada problema. A fim de garantir a boa manutenção do repositório, deve-se ainda configurar corretamente o arquivo `.gitignore` para desconsiderar arquivos que não devam ser versionados, a exemplo do diretório `build` e seus arquivos, resultantes do processo de compilação com o `cmake`.
 
 A implementação das soluções para os problemas propostos neste trabalho deverá ser realizada **até as 23h59 do dia 30 de abril de 2022** no respectivo repositório Git da equipe. Para fins de registro, o endereço do repositório também deverá ser enviado através da opção *Tarefas* na Turma Virtual do SIGAA. **Não serão aceitos envios por outros meios ou repositórios que não sejam os descritos nesta especificação.**
 
