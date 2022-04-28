@@ -276,7 +276,7 @@ O não cumprimento de algum dos critérios de avaliação especificados poderá 
 | :--- | ---: |
 | Falta de comentários no código fonte e/ou de documentação gerada com Doxygen | -10% |
 | Uso inadequado de controle de versão com Git | -20% |
-| Falta de especificação ou especificação incorreta da autoria do trabalho (arquivo [`author.md`](https://github.com/bti-ufrn-lp1/lista01/blob/master/author.md) | -20% |
+| Falta de especificação ou especificação incorreta da autoria do trabalho (arquivo [`author.md`](https://github.com/bti-ufrn-lp1/lista01/blob/master/author.md)) | -20% |
 | Implementação na linguagem C ou resultante de mistura entre as linguagens C e C++ | -30% |
 | Código fonte com legibilidade prejudicada (por exemplo, com identação ou nomenclatura inadequada) | -40% |
 | Programa compila com mensagens de aviso (*warnings*) | -50% |
