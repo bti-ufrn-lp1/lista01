@@ -1,5 +1,5 @@
 # Lista 1: Elementos fundamentais de programação em C++
-<sub>Última atualização: 18/04/2022</sub>
+<sub>Última atualização: 28/04/2022</sub>
 
 ## Sumário
 - [Visão geral e objetivos](#visão-geral-e-objetivos)  
@@ -247,7 +247,7 @@ $ cmake --build . --target run_tests
 No desenvolvimento das soluções aos problemas propostos, as seguintes observações deverão ser atendidas:
 
 1. Apesar da completa compatibilidade entre as linguagens de programação C e C++, o código fonte produzido **não** deverá conter recursos da linguagem C nem ser resultante da mescla entre as duas linguagens. Dessa forma, deverão ser utilizados **estritamente** recursos da linguagem C++.
-2. Boas práticas de programação deverão ser constantemente aplicadas. Os programas deverão ser codificados de forma legível (com indentação de código fonte, nomes consistentes, etc.) e documentados adequadamente na forma de comentários. O código fonte deverá ainda ser anotado para dar suporte à geração automática de documentação utilizando a ferramenta [Doxygen](https://www.doxygen.nl/). O documento de apoio disponível neste [link](https://drive.google.com/file/d/1YA1KxASCNY3B8APowD2V0sL-kAso9g86/view) contém algumas instruções acerca do padrão de documentação e uso do Doxygen.
+2. Boas práticas de programação deverão ser constantemente aplicadas. Os programas deverão ser codificados de forma legível (com indentação de código fonte, nomes consistentes, etc.) e documentados adequadamente na forma de comentários. O código fonte deverá ainda ser anotado para dar suporte à geração automática de documentação utilizando a ferramenta [Doxygen](https://www.doxygen.nl/). O documento de apoio disponível neste [link](https://drive.google.com/file/d/1YA1KxASCNY3B8APowD2V0sL-kAso9g86/view) contém algumas instruções acerca do padrão de documentação e uso do Doxygen. **Cada projeto deverá ter sua documentação específica**, de forma separada dos demais.
 3. As soluções deverão ser desenvolvidas com qualidade, garantindo que o programa funcione de forma correta e eficiente. Deve-se também pensar nas possíveis entradas que poderão ser utilizadas para testar apropriadamente cada programa, além de serem tratadas adequadamente possíveis entradas consideradas inválidas. A execução dos testes automatizados é útil para identificar esses tipos de casos.
 
 ## Autoria e política de colaboração
@@ -274,11 +274,12 @@ O não cumprimento de algum dos critérios de avaliação especificados poderá 
 
 | Falta | Decréscimo |
 | :--- | ---: |
-| Programa apresenta erros de compilação, não executa ou apresenta saída incorreta | -70% |
 | Falta de comentários no código fonte e/ou de documentação gerada com Doxygen | -10% |
 | Uso inadequado de controle de versão com Git | -20% |
 | Implementação na linguagem C ou resultante de mistura entre as linguagens C e C++ | -30% |
+| Código fonte com legibilidade prejudicada (por exemplo, com identação ou nomenclatura inconsiste | -40% |
 | Programa compila com mensagens de aviso (*warnings*) | -50% |
+| Programa apresenta erros de compilação, não executa ou apresenta saída incorreta | -70% |
 | Plagiarismo | -100% |
 
 ## Dúvidas e informações
