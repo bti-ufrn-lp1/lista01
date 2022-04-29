@@ -278,8 +278,7 @@ O não cumprimento de algum dos critérios de avaliação especificados poderá 
 | Uso inadequado de controle de versão com Git | -20% |
 | Falta de especificação ou especificação incorreta da autoria do trabalho (arquivo [`author.md`](https://github.com/bti-ufrn-lp1/lista01/blob/master/author.md)) | -20% |
 | Implementação na linguagem C ou resultante de mistura entre as linguagens C e C++ | -30% |
-| Código fonte com legibilidade prejudicada (por exemplo, com identação ou nomenclatura inadequada) | -40% |
-| Programa compila com mensagens de aviso (*warnings*) | -50% |
+| Código fonte com legibilidade prejudicada (por exemplo, com identação ou nomenclatura inadequada) | -50% |
 | Programa apresenta erros de compilação, não executa ou apresenta saída incorreta | -70% |
 | Plagiarismo | -100% |
 
